@@ -15,14 +15,18 @@ class AuthentificationService {
     }
     
     func registration(firstname: String, lastname: String, password: String, age: String , successHandler: () -> Void, errorHandler: (String) -> Void) {
-        
-        
         successHandler() //-?
+    }
+    
+    func tableViewUsers(userImage : String, userNumber : Int, userName : String, userAge: Int, successHandler: () -> Void, errorHandler: (String) -> Void) {
         
-        
+        successHandler()
         
     }
 }
+
+
+
 
 
 

@@ -32,7 +32,6 @@ class RegisterViewController: UIViewController {
     }
     
     func register(firstname: String, lastname: String, password: String, age: String) {
-//        self.authentificationService.registration( firstname: firstname, lastname: lastname, password: password, age: age )
         self.authentificationService.registration(firstname: firstname, lastname: lastname, password: password, age: age) { [weak self] in
             print("success")
             self?.navigateToUserListVC()
@@ -50,10 +49,7 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButton(_ sender: Any) {
         if firstNameTextField.text?.count != 0 && lastNameTextField.text?.count != 0 &&  passwordTextField.text?.count != 0 && ageTextField.text?.count != 0 {
-//            let viewController:UIViewController = UserListTableViewController()
-//            self.navigationController?.pushViewController(viewController, animated: true)
-       //     navigateToUserListVC()
-//            register(firstname: firstNameTextField.text!, lastname: lastNameTextField.text!, password: passwordTextField.text!, age: ageTextField.text!)
+
             register(firstname: firstNameTextField.text!, lastname: lastNameTextField.text!, password: passwordTextField.text!, age: ageTextField.text!)
         } else {
             let alertController = UIAlertController(
